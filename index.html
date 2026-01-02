@@ -2,42 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="handheldfriendly" content="true">
+    <meta name="mobileoptimized" content="width">
     <title>Casel Consultancy | Visa & Immigration Experts</title>
-   <!-- SEO Meta Tags -->
-<meta name="description" content="Casel Consultancy - Top-rated visa & immigration experts. Get Canada, Germany visas, scholarships & Europe conferences. 98% success rate, 15+ years experience. Free consultation available.">
-<meta name="keywords" content="visa consultancy, Canada visa, Germany visa, immigration services, study abroad, work visa, student visa, scholarship assistance, Europe conferences, visa application, immigration consultant, PR visa">
-<meta name="author" content="Casel Consultancy SMC Limited">
-<meta name="robots" content="index, follow">
-<meta name="googlebot" content="index, follow">
-<meta name="language" content="English">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Casel Consultancy - Top-rated visa & immigration experts. Get Canada, Germany visas, scholarships & Europe conferences. 98% success rate, 15+ years experience. Free consultation available.">
+    <meta name="keywords" content="visa consultancy, Canada visa, Germany visa, immigration services, study abroad, work visa, student visa, scholarship assistance, Europe conferences, visa application, immigration consultant, PR visa">
+    <meta name="author" content="Casel Consultancy SMC Limited">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="English">
 
-<!-- Open Graph for Social Media -->
-<meta property="og:title" content="Casel Consultancy | Visa & Immigration Experts | SMC Limited">
-<meta property="og:description" content="Professional visa consultation with 98% success rate. Canada, Germany visas, scholarships, Europe conferences. 15+ years experience.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.caselconsultancy.com">
-<meta property="og:image" content="https://www.caselconsultancy.com/images/og-image.jpg">
-<meta property="og:site_name" content="Casel Consultancy">
-<meta property="og:locale" content="en_US">
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Casel Consultancy | Visa & Immigration Experts | SMC Limited">
+    <meta property="og:description" content="Professional visa consultation with 98% success rate. Canada, Germany visas, scholarships, Europe conferences. 15+ years experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.caselconsultancy.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1551524165-6b6e5a6166f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:site_name" content="Casel Consultancy">
+    <meta property="og:locale" content="en_US">
 
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Casel Consultancy | Visa & Immigration Experts">
-<meta name="twitter:description" content="98% success rate for Canada, Germany visas. Scholarships & Europe conferences. Free consultation available.">
-<meta name="twitter:image" content="https://www.caselconsultancy.com/images/twitter-card.jpg">
-<meta name="twitter:site" content="@CaselConsultancy">
-<meta name="twitter:creator" content="@CaselConsultancy">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Casel Consultancy | Visa & Immigration Experts">
+    <meta name="twitter:description" content="98% success rate for Canada, Germany visas. Scholarships & Europe conferences. Free consultation available.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1551524165-6b6e5a6166f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta name="twitter:site" content="@CaselConsultancy">
+    <meta name="twitter:creator" content="@CaselConsultancy">
 
-<!-- Additional Important Meta Tags -->
-<meta name="theme-color" content="#0A2463">
-<meta name="msapplication-TileColor" content="#0A2463">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="canonical" href="https://www.caselconsultancy.com">
+    <!-- Mobile-Specific Meta Tags -->
+    <meta name="theme-color" content="#0A2463">
+    <meta name="msapplication-TileColor" content="#0A2463">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Casel Consultancy">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="https://www.caselconsultancy.com">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/passport.png">
+    <link rel="apple-touch-icon" href="https://img.icons8.com/color/180/000000/passport.png">
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -79,10 +85,19 @@
             line-height: 1.7;
             color: var(--text-color);
             overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
         
         @supports (font-variation-settings: normal) {
             body { font-family: 'Inter var', sans-serif; }
+        }
+        
+        /* Prevent horizontal scroll on mobile */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
         }
         
         /* Typography */
@@ -93,7 +108,7 @@
         }
         
         h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             background-clip: text;
@@ -101,20 +116,14 @@
             line-height: 1.2;
         }
         
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-        }
-        
         .lead {
-            font-size: 1.25rem;
+            font-size: clamp(1rem, 3vw, 1.25rem);
             font-weight: 400;
             color: var(--text-color);
             opacity: 0.9;
         }
         
-        /* Navigation */
+        /* Navigation - Mobile Optimized */
         .navbar {
             padding: 1rem 0;
             background: rgba(255, 255, 255, 0.98) !important;
@@ -136,7 +145,7 @@
             display: flex;
             align-items: center;
             font-weight: 800;
-            font-size: 1.8rem;
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
             color: var(--primary-color) !important;
         }
         
@@ -152,24 +161,30 @@
             color: white;
             font-weight: bold;
             font-size: 1.2rem;
+            flex-shrink: 0;
         }
         
         .brand-subtitle {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--accent-color);
             font-weight: 600;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
-            margin-top: -5px;
+            margin-top: -2px;
+            line-height: 1;
         }
         
         .nav-link {
             font-weight: 500;
             color: var(--dark-color) !important;
-            padding: 0.5rem 1rem !important;
-            margin: 0 0.25rem;
+            padding: 0.75rem 1rem !important;
+            margin: 0.25rem 0;
             border-radius: 8px;
             transition: all 0.3s ease;
+            font-size: 1rem;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
         }
         
         .nav-link:hover, .nav-link.active {
@@ -178,9 +193,42 @@
             transform: translateY(-2px);
         }
         
-        /* Hero Section */
+        /* Mobile Menu Styling */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: white;
+                padding: 1rem;
+                border-radius: 10px;
+                margin-top: 10px;
+                box-shadow: var(--shadow-lg);
+                max-height: calc(100vh - 80px);
+                overflow-y: auto;
+            }
+            
+            .navbar-nav {
+                padding: 0.5rem 0;
+            }
+            
+            .nav-item {
+                margin: 0.25rem 0;
+            }
+            
+            .navbar-toggler {
+                border: none;
+                padding: 0.5rem;
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            .navbar-toggler:focus {
+                box-shadow: none;
+                outline: 2px solid var(--accent-color);
+            }
+        }
+        
+        /* Hero Section - Mobile Optimized */
         .hero-section {
-            padding: 160px 0 100px;
+            padding: clamp(120px, 15vw, 160px) 0 clamp(60px, 10vw, 100px);
             background: var(--light-color);
             position: relative;
             overflow: hidden;
@@ -203,35 +251,25 @@
         
         .hero-image {
             position: relative;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
             box-shadow: var(--shadow-xl);
-            transform: perspective(1000px) rotateY(-10deg);
-            transition: transform 0.5s ease;
-        }
-        
-        .hero-image:hover {
-            transform: perspective(1000px) rotateY(0deg);
-        }
-        
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
+            margin-top: 2rem;
         }
         
         .hero-badge {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 15px;
+            right: 15px;
             background: var(--gradient-primary);
             color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
+            padding: 8px 15px;
+            border-radius: 25px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             box-shadow: var(--shadow-md);
             animation: pulse 2s infinite;
+            z-index: 2;
         }
         
         @keyframes pulse {
@@ -240,51 +278,50 @@
             100% { transform: scale(1); }
         }
         
-        /* Stats */
+        /* Stats - Mobile Optimized */
         .stats-section {
-            padding: 80px 0;
+            padding: clamp(50px, 8vw, 80px) 0;
             background: var(--gradient-primary);
             color: white;
         }
         
         .stat-card {
             text-align: center;
-            padding: 30px 20px;
+            padding: clamp(20px, 4vw, 30px) clamp(15px, 3vw, 20px);
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: transform 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.15);
+            margin-bottom: 1rem;
+            height: 100%;
         }
         
         .stat-number {
-            font-size: 3rem;
+            font-size: clamp(2.2rem, 5vw, 3rem);
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             display: block;
         }
         
-        /* Services */
+        /* Services - Mobile Optimized */
         .services-section {
-            padding: 100px 0;
+            padding: clamp(60px, 10vw, 100px) 0;
             background: var(--light-color);
         }
         
         .section-title {
             position: relative;
-            margin-bottom: 60px;
+            margin-bottom: clamp(40px, 6vw, 60px);
             text-align: center;
+            padding: 0 1rem;
         }
         
         .section-title h2 {
             display: inline-block;
             position: relative;
             padding-bottom: 15px;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
         }
         
         .section-title h2:after {
@@ -293,7 +330,7 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
+            width: 60px;
             height: 4px;
             background: var(--gradient-accent);
             border-radius: 2px;
@@ -307,15 +344,11 @@
             height: 100%;
             transition: all 0.4s ease;
             border: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--shadow-xl);
+            margin-bottom: 1.5rem;
         }
         
         .service-header {
-            height: 200px;
+            height: clamp(150px, 30vw, 200px);
             position: relative;
             overflow: hidden;
         }
@@ -327,50 +360,49 @@
             transition: transform 0.5s ease;
         }
         
-        .service-card:hover .service-header img {
-            transform: scale(1.1);
-        }
-        
         .service-badge {
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 12px;
+            right: 12px;
             background: var(--gradient-primary);
             color: white;
-            padding: 5px 15px;
+            padding: 4px 12px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
+            z-index: 2;
         }
         
         .service-icon {
             position: absolute;
-            bottom: -30px;
-            left: 30px;
-            width: 60px;
-            height: 60px;
+            bottom: -25px;
+            left: 25px;
+            width: 50px;
+            height: 50px;
             background: var(--gradient-primary);
-            border-radius: 15px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             box-shadow: var(--shadow-md);
+            z-index: 2;
         }
         
         .service-body {
-            padding: 40px 30px 30px;
+            padding: 35px 20px 25px;
         }
         
         .service-features {
             list-style: none;
             padding: 0;
-            margin: 20px 0;
+            margin: 15px 0;
+            font-size: 0.95rem;
         }
         
         .service-features li {
-            padding: 5px 0;
+            padding: 4px 0;
             color: var(--text-color);
             opacity: 0.9;
         }
@@ -379,145 +411,125 @@
             content: "✓";
             color: var(--success-color);
             font-weight: bold;
-            margin-right: 10px;
+            margin-right: 8px;
         }
         
-        /* CTA Section */
+        /* CTA Section - Mobile Optimized */
         .cta-section {
-            padding: 100px 0;
+            padding: clamp(60px, 10vw, 100px) 0;
             background: var(--gradient-primary);
             color: white;
             position: relative;
             overflow: hidden;
         }
         
-        .cta-pattern {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 40%;
-            height: 100%;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" opacity="0.05"><circle cx="50" cy="50" r="40" fill="white"/></svg>');
-            background-size: cover;
-        }
-        
         .cta-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 50px;
+            border-radius: 15px;
+            padding: clamp(25px, 5vw, 40px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             position: relative;
             z-index: 2;
         }
         
-        /* Process Section */
+        /* Process Section - Mobile Optimized */
         .process-section {
-            padding: 100px 0;
+            padding: clamp(60px, 10vw, 100px) 0;
             background: white;
         }
         
         .process-step {
             text-align: center;
-            padding: 30px;
+            padding: 20px 15px;
             position: relative;
+            margin-bottom: 2rem;
         }
         
         .process-number {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background: var(--gradient-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px;
             position: relative;
             z-index: 2;
         }
         
-        .process-line {
-            position: absolute;
-            top: 30px;
-            left: 50%;
-            width: 100%;
-            height: 2px;
-            background: var(--light-color);
-            z-index: 1;
-        }
-        
-        /* Testimonials */
+        /* Testimonials - Mobile Optimized */
         .testimonials-section {
-            padding: 100px 0;
+            padding: clamp(60px, 10vw, 100px) 0;
             background: var(--light-color);
         }
         
         .testimonial-card {
             background: white;
             border-radius: 15px;
-            padding: 30px;
+            padding: 25px;
             box-shadow: var(--shadow-md);
             height: 100%;
             position: relative;
+            margin-bottom: 1.5rem;
         }
         
         .testimonial-card:before {
             content: '"';
             position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 4rem;
+            top: 15px;
+            left: 15px;
+            font-size: 3rem;
             color: var(--accent-color);
             opacity: 0.2;
             font-family: Georgia, serif;
         }
         
-        .testimonial-rating {
-            color: var(--warning-color);
-            margin-bottom: 20px;
-        }
-        
         .testimonial-author {
             display: flex;
             align-items: center;
-            margin-top: 25px;
+            margin-top: 20px;
         }
         
         .author-avatar {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
-            margin-right: 15px;
+            margin-right: 12px;
             background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: 600;
+            flex-shrink: 0;
         }
         
-        /* Contact Form */
+        /* Contact Section - Mobile Optimized */
         .contact-section {
-            padding: 100px 0;
+            padding: clamp(60px, 10vw, 100px) 0;
             background: white;
         }
         
         .contact-form {
             background: white;
-            border-radius: 20px;
-            padding: 50px;
+            border-radius: 15px;
+            padding: clamp(25px, 5vw, 40px);
             box-shadow: var(--shadow-xl);
+            margin-top: 2rem;
         }
         
         .form-control, .form-select {
-            padding: 12px 20px;
+            padding: 14px 16px;
             border: 2px solid #e2e8f0;
             border-radius: 10px;
-            font-size: 1rem;
+            font-size: 16px;
             transition: all 0.3s ease;
+            min-height: 50px;
         }
         
         .form-control:focus, .form-select:focus {
@@ -525,26 +537,31 @@
             box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
         
-        /* Footer */
+        /* Footer - Mobile Optimized */
         .footer {
             background: var(--dark-color);
             color: white;
-            padding: 80px 0 30px;
+            padding: clamp(50px, 8vw, 80px) 0 30px;
         }
         
         .footer-brand {
-            font-size: 1.8rem;
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
             font-weight: 800;
             color: white;
             margin-bottom: 20px;
             display: inline-block;
         }
         
+        .footer-links {
+            margin-bottom: 2rem;
+        }
+        
         .footer-links h5 {
             color: white;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
+            font-size: 1.2rem;
         }
         
         .footer-links h5:after {
@@ -552,7 +569,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 40px;
+            width: 35px;
             height: 3px;
             background: var(--accent-color);
         }
@@ -563,7 +580,7 @@
         }
         
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         
         .footer-links a {
@@ -572,26 +589,20 @@
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-            padding-left: 5px;
-        }
-        
-        .footer-links a i {
-            margin-right: 8px;
+            font-size: 0.95rem;
+            min-height: 24px;
         }
         
         .social-links {
             display: flex;
-            gap: 15px;
-            margin-top: 30px;
+            gap: 12px;
+            margin-top: 25px;
+            flex-wrap: wrap;
         }
         
         .social-link {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
@@ -599,60 +610,34 @@
             justify-content: center;
             color: white;
             transition: all 0.3s ease;
-        }
-        
-        .social-link:hover {
-            background: var(--accent-color);
-            transform: translateY(-3px);
+            text-decoration: none;
+            min-height: 42px;
+            min-width: 42px;
         }
         
         .copyright {
             text-align: center;
             padding-top: 30px;
-            margin-top: 50px;
+            margin-top: 40px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
         
-        /* Buttons */
+        /* Buttons - Mobile Optimized */
         .btn {
-            padding: 12px 30px;
+            padding: 14px 28px;
             border-radius: 10px;
             font-weight: 600;
             transition: all 0.3s ease;
             border: none;
             position: relative;
             overflow: hidden;
-        }
-        
-        .btn:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.5);
-            opacity: 0;
-            border-radius: 100%;
-            transform: scale(1, 1) translate(-50%);
-            transform-origin: 50% 50%;
-        }
-        
-        .btn:focus:not(:active)::after {
-            animation: ripple 1s ease-out;
-        }
-        
-        @keyframes ripple {
-            0% {
-                transform: scale(0, 0);
-                opacity: 0.5;
-            }
-            100% {
-                transform: scale(20, 20);
-                opacity: 0;
-            }
+            font-size: 1rem;
+            min-height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .btn-primary {
@@ -661,20 +646,10 @@
             box-shadow: var(--shadow-md);
         }
         
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
-        
         .btn-accent {
             background: var(--gradient-accent);
             color: white;
             box-shadow: var(--shadow-md);
-        }
-        
-        .btn-accent:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
         }
         
         .btn-outline-light {
@@ -683,12 +658,68 @@
             background: transparent;
         }
         
-        .btn-outline-light:hover {
-            background: white;
-            color: var(--primary-color);
+        /* Floating Contact Buttons - Mobile Optimized */
+        .contact-floating-buttons {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            z-index: 998;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
         
-        /* Floating Whatsapp Button */
+        .floating-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+            animation-delay: calc(var(--i) * 0.2s);
+        }
+        
+        .floating-button.call {
+            background: linear-gradient(135deg, #10B981, #34D399);
+        }
+        
+        .floating-button.email {
+            background: linear-gradient(135deg, #3B82F6, #60A5FA);
+        }
+        
+        .floating-button:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .floating-button .tooltip {
+            position: absolute;
+            right: 60px;
+            background: var(--dark-color);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .floating-button:hover .tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Whatsapp Button - Mobile Optimized */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -702,20 +733,34 @@
             align-items: center;
             justify-content: center;
             font-size: 1.8rem;
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
             z-index: 999;
             transition: all 0.3s ease;
             animation: float 3s ease-in-out infinite;
+            text-decoration: none;
+            min-height: 60px;
+            min-width: 60px;
         }
         
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        @media (max-width: 576px) {
+            .whatsapp-float {
+                bottom: 25px;
+                right: 25px;
+                width: 56px;
+                height: 56px;
+                font-size: 1.6rem;
+            }
+            
+            .contact-floating-buttons {
+                bottom: 85px;
+                right: 15px;
+            }
+            
+            .floating-button {
+                width: 48px;
+                height: 48px;
+                font-size: 1.2rem;
+            }
         }
         
         /* Loading Animation */
@@ -739,8 +784,8 @@
         }
         
         .loader-spinner {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border: 5px solid white;
             border-radius: 50%;
             border-top-color: transparent;
@@ -751,40 +796,117 @@
             100% { transform: rotate(360deg); }
         }
         
-        /* Responsive Adjustments */
+        /* Mobile-Specific Enhancements */
         @media (max-width: 768px) {
-            .hero-section {
-                padding: 120px 0 60px;
-                text-align: center;
-            }
-            
             .hero-bg-pattern {
                 display: none;
             }
             
-            .cta-card, .contact-form {
-                padding: 30px;
+            .hero-content {
+                text-align: center;
             }
             
-            .service-card {
-                margin-bottom: 30px;
+            .btn {
+                width: 100%;
+                margin-bottom: 10px;
             }
             
-            .process-line {
-                display: none;
+            .btn-group {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .service-body h4 {
+                font-size: 1.3rem;
+            }
+            
+            .testimonial-card {
+                padding: 20px;
+            }
+            
+            .contact-form {
+                padding: 20px;
+            }
+            
+            /* Improve mobile typography */
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            h3 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 1rem;
             }
         }
         
-        /* Animation Classes */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+        @media (max-width: 576px) {
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .row {
+                margin-left: -8px;
+                margin-right: -8px;
+            }
+            
+            .col, .col-auto, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
+            .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+            .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
+            .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+            .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+            .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+            .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
+            .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+            .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6,
+            .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
         }
         
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .nav-link, .btn, .social-link, .footer-links a, 
+            .floating-button, .whatsapp-float {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            .service-card, .testimonial-card, .stat-card {
+                cursor: default;
+            }
+            
+            /* Increase tap targets */
+            .form-check-label, .form-check-input {
+                min-height: 44px;
+                padding-left: 2.5rem;
+            }
+            
+            .form-check-input {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #0f172a;
+                color: #cbd5e1;
+            }
+            
+            .service-card, .testimonial-card, .contact-form {
+                background-color: #1e293b;
+                color: #cbd5e1;
+            }
+            
+            h1, h2, h3, h4, h5, h6 {
+                color: #e2e8f0;
+            }
         }
     </style>
     
@@ -792,85 +914,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<!-- Google Analytics -->
-<!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GA_MEASUREMENT_ID');
-</script>
-
-<!-- For enhanced tracking (form submissions, clicks) -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Track form submissions
-    document.querySelectorAll('form').forEach(form => {
-        form.addEventListener('submit', function() {
-            gtag('event', 'form_submission', {
-                'event_category': 'Contact',
-                'event_label': this.id || 'contact_form'
-            });
-        });
-    });
-    
-    // Track phone clicks
-    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-        link.addEventListener('click', function() {
-            gtag('event', 'phone_click', {
-                'event_category': 'Contact',
-                'event_label': this.href
-            });
-        });
-    });
-    
-    // Track WhatsApp clicks
-    document.querySelector('.whatsapp-float').addEventListener('click', function() {
-        gtag('event', 'whatsapp_click', {
-            'event_category': 'Contact',
-            'event_label': 'WhatsApp Chat'
-        });
-    });
-    
-    // Track service clicks
-    document.querySelectorAll('a[href="#contact"]').forEach(link => {
-        link.addEventListener('click', function() {
-            const service = this.closest('.service-card')?.querySelector('h4')?.textContent || 'General Inquiry';
-            gtag('event', 'service_inquiry', {
-                'event_category': 'Services',
-                'event_label': service
-            });
-        });
-    });
-});
-</script>
-
-<!-- Enhanced E-commerce Tracking (optional) -->
-<script>
-// Track service views
-document.addEventListener('DOMContentLoaded', function() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const serviceName = entry.target.querySelector('h4')?.textContent;
-                if (serviceName) {
-                    gtag('event', 'view_item', {
-                        'event_category': 'Services',
-                        'event_label': serviceName
-                    });
-                }
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    // Observe all service cards
-    document.querySelectorAll('.service-card').forEach(card => {
-        observer.observe(card);
-    });
-});
-</script>
-
 </head>
 <body>
     <!-- Loading Screen -->
@@ -878,8 +921,20 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="loader-spinner"></div>
     </div>
 
+    <!-- Floating Contact Buttons -->
+    <div class="contact-floating-buttons">
+        <a href="tel:0751785175" class="floating-button call" title="Call Us" style="--i: 1;">
+            <i class="bi bi-telephone"></i>
+            <span class="tooltip">Call: 0751785175</span>
+        </a>
+        <a href="mailto:tukke123simon@gmail.com" class="floating-button email" title="Email Us" style="--i: 2;">
+            <i class="bi bi-envelope"></i>
+            <span class="tooltip">Email Us</span>
+        </a>
+    </div>
+
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/1234567890?text=Hello%20Casel%20Consultancy,%20I%20need%20information%20about%20visa%20services" 
+    <a href="https://wa.me/256751785175?text=Hello%20Casel%20Consultancy,%20I%20need%20information%20about%20visa%20services" 
        class="whatsapp-float" 
        target="_blank" 
        title="Chat on WhatsApp">
@@ -897,7 +952,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </a>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
@@ -938,12 +993,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         <a href="#contact" class="btn btn-primary btn-lg">
                             <i class="bi bi-calendar-check me-2"></i>Book Free Consultation
                         </a>
-                        <a href="#services" class="btn btn-outline-primary btn-lg">
-                            <i class="bi bi-eye me-2"></i>View Services
+                        <a href="tel:0751785175" class="btn btn-accent btn-lg">
+                            <i class="bi bi-telephone me-2"></i>Call Now
                         </a>
                     </div>
                     
-                    <div class="row">
+                    <div class="row g-3">
                         <div class="col-4">
                             <div class="text-center">
                                 <h3 class="text-primary">2,000+</h3>
@@ -982,7 +1037,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Stats Section -->
     <section class="stats-section">
         <div class="container">
-            <div class="row g-4">
+            <div class="row g-3">
                 <div class="col-md-3 col-6" data-aos="fade-up">
                     <div class="stat-card">
                         <span class="stat-number">98%</span>
@@ -1039,7 +1094,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <li>Study Permit Processing</li>
                                 <li>Work Permit Applications</li>
                             </ul>
-                            <a href="#contact" class="btn btn-accent w-100">Get Started</a>
+                            <a href="tel:0751785175" class="btn btn-accent w-100">
+                                <i class="bi bi-telephone me-2"></i>Call for Details
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1062,7 +1119,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <li>Work Permit Assistance</li>
                                 <li>Language Course Guidance</li>
                             </ul>
-                            <a href="#contact" class="btn btn-accent w-100">Get Started</a>
+                            <a href="tel:0755964336" class="btn btn-accent w-100">
+                                <i class="bi bi-telephone me-2"></i>Call for Details
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1086,12 +1145,14 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <li>SOP & LOR Assistance</li>
                                 <li>Interview Preparation</li>
                             </ul>
-                            <a href="#contact" class="btn btn-accent w-100">Get Started</a>
+                            <a href="tel:0751785175" class="btn btn-accent w-100">
+                                <i class="bi bi-telephone me-2"></i>Call for Details
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Additional Services Row -->
+                <!-- Additional Services -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up">
                     <div class="service-card">
                         <div class="service-header">
@@ -1109,7 +1170,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <li>Visa Assistance</li>
                                 <li>Accommodation Support</li>
                             </ul>
-                            <a href="#contact" class="btn btn-accent w-100">Get Started</a>
+                            <a href="tel:0751785175" class="btn btn-accent w-100">
+                                <i class="bi bi-telephone me-2"></i>Call for Details
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1131,7 +1194,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <li>Financial Proof</li>
                                 <li>Extension Support</li>
                             </ul>
-                            <a href="#contact" class="btn btn-accent w-100">Get Started</a>
+                            <a href="tel:0751785175" class="btn btn-accent w-100">
+                                <i class="bi bi-telephone me-2"></i>Call for Details
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1153,7 +1218,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <li>Post-Arrival Support</li>
                                 <li>Renewal Services</li>
                             </ul>
-                            <a href="#contact" class="btn btn-accent w-100">Get Started</a>
+                            <a href="tel:0751785175" class="btn btn-accent w-100">
+                                <i class="bi bi-telephone me-2"></i>Call for Details
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1169,10 +1236,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p class="lead">Transparent and efficient process for your visa success</p>
             </div>
             
-            <div class="row position-relative">
-                <div class="process-line"></div>
-                
-                <div class="col-lg-2-4 col-md-4 col-6" data-aos="fade-up">
+            <div class="row">
+                <div class="col-md-4 col-6 mb-4" data-aos="fade-up">
                     <div class="process-step">
                         <div class="process-number">1</div>
                         <h5>Initial Consultation</h5>
@@ -1180,7 +1245,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 
-                <div class="col-lg-2-4 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="process-step">
                         <div class="process-number">2</div>
                         <h5>Documentation</h5>
@@ -1188,7 +1253,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 
-                <div class="col-lg-2-4 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="process-step">
                         <div class="process-number">3</div>
                         <h5>Application</h5>
@@ -1196,7 +1261,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 
-                <div class="col-lg-2-4 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="process-step">
                         <div class="process-number">4</div>
                         <h5>Processing</h5>
@@ -1204,11 +1269,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 
-                <div class="col-lg-2-4 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="process-step">
                         <div class="process-number">5</div>
                         <h5>Visa Grant</h5>
                         <p>Visa approval and post-arrival guidance</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="process-step">
+                        <div class="process-number"><i class="bi bi-headset"></i></div>
+                        <h5>Ongoing Support</h5>
+                        <p>24/7 support even after visa approval</p>
                     </div>
                 </div>
             </div>
@@ -1217,15 +1290,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <div class="cta-pattern"></div>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8" data-aos="zoom-in">
+                <div class="col-lg-10" data-aos="zoom-in">
                     <div class="cta-card text-center">
                         <h2 class="text-white mb-4">Ready to Begin Your Journey?</h2>
                         <p class="text-white mb-5">Book a free consultation with our immigration experts today. Get personalized advice for your visa application.</p>
                         
-                        <div class="row justify-content-center">
+                        <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mb-4">
+                            <a href="tel:0751785175" class="btn btn-light btn-lg">
+                                <i class="bi bi-telephone me-2"></i>Call: 0751785175
+                            </a>
+                            <a href="tel:0755964336" class="btn btn-outline-light btn-lg">
+                                <i class="bi bi-phone me-2"></i>Call: 0755964336
+                            </a>
+                        </div>
+                        
+                        <div class="row justify-content-center mt-4">
                             <div class="col-lg-8">
                                 <form id="ctaForm" class="row g-3">
                                     <div class="col-md-6">
@@ -1345,7 +1426,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             
             <div class="row g-5">
-                <div class="col-lg-4" data-aos="fade-right">
+                <div class="col-lg-5" data-aos="fade-right">
                     <div class="mb-5">
                         <h3 class="mb-4">Contact Information</h3>
                         <div class="d-flex mb-4">
@@ -1356,7 +1437,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <h5>Office Address</h5>
-                                <p class="mb-0">123 Immigration Street, Visa District<br>Consultancy City, CC 10010</p>
+                                <p class="mb-0">Casel Consultancy SMC Limited<br>Kampala, Uganda</p>
                             </div>
                         </div>
                         
@@ -1367,8 +1448,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                             </div>
                             <div class="flex-grow-1 ms-3">
-                                <h5>Phone Number</h5>
-                                <p class="mb-0">+1 (123) 456-7890<br>+1 (123) 456-7891</p>
+                                <h5>Phone Numbers</h5>
+                                <p class="mb-0">
+                                    <a href="tel:0751785175" class="text-decoration-none text-dark">+256 751 785175</a><br>
+                                    <a href="tel:0755964336" class="text-decoration-none text-dark">+256 755 964336</a>
+                                </p>
                             </div>
                         </div>
                         
@@ -1380,7 +1464,10 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <h5>Email Address</h5>
-                                <p class="mb-0">info@caselconsultancy.com<br>support@caselconsultancy.com</p>
+                                <p class="mb-0">
+                                    <a href="mailto:tukke123simon@gmail.com" class="text-decoration-none text-dark">tukke123simon@gmail.com</a><br>
+                                    <a href="mailto:info@caselconsultancy.com" class="text-decoration-none text-dark">info@caselconsultancy.com</a>
+                                </p>
                             </div>
                         </div>
                         
@@ -1392,21 +1479,21 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <h5>Working Hours</h5>
-                                <p class="mb-0">Mon-Fri: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+                                <p class="mb-0">Mon-Fri: 8:00 AM - 7:00 PM<br>Saturday: 9:00 AM - 5:00 PM<br>Sunday: 10:00 AM - 3:00 PM</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
                 
-                <div class="col-lg-8" data-aos="fade-left">
+                <div class="col-lg-7" data-aos="fade-left">
                     <div class="contact-form">
                         <h3 class="mb-4">Send Us a Message</h3>
                         <form id="mainContactForm">
@@ -1415,10 +1502,10 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <input type="text" class="form-control" placeholder="Your Name" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                    <input type="tel" class="form-control" placeholder="Phone Number" required>
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control" placeholder="Subject" required>
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
                                 </div>
                                 <div class="col-12">
                                     <select class="form-select" required>
@@ -1442,6 +1529,18 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                             </div>
                         </form>
+                        
+                        <div class="mt-4 text-center">
+                            <p class="text-muted small mb-2">Prefer to talk directly?</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="tel:0751785175" class="btn btn-accent">
+                                    <i class="bi bi-telephone me-2"></i>Call Now
+                                </a>
+                                <a href="https://wa.me/256751785175" class="btn btn-success" target="_blank">
+                                    <i class="bi bi-whatsapp me-2"></i>WhatsApp
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1456,10 +1555,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <a href="#" class="footer-brand">CASEL CONSULTANCY</a>
                     <p class="mt-3">Professional immigration and visa consultancy services with a commitment to excellence and client satisfaction.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
                 
@@ -1491,20 +1590,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-links">
-                        <h5>Legal</h5>
+                        <h5>Contact Info</h5>
                         <ul>
-                            <li><a href="#"><i class="bi bi-file-text"></i> Privacy Policy</a></li>
-                            <li><a href="#"><i class="bi bi-file-text"></i> Terms of Service</a></li>
-                            <li><a href="#"><i class="bi bi-file-text"></i> Refund Policy</a></li>
-                            <li><a href="#"><i class="bi bi-file-text"></i> Disclaimer</a></li>
-                            <li><a href="#"><i class="bi bi-file-text"></i> Sitemap</a></li>
+                            <li><a href="tel:0751785175"><i class="bi bi-telephone"></i> +256 751 785175</a></li>
+                            <li><a href="tel:0755964336"><i class="bi bi-phone"></i> +256 755 964336</a></li>
+                            <li><a href="mailto:tukke123simon@gmail.com"><i class="bi bi-envelope"></i> tukke123simon@gmail.com</a></li>
+                            <li><a href="https://wa.me/256751785175" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp Chat</a></li>
+                            <li><i class="bi bi-clock"></i> Mon-Sun: 8 AM - 7 PM</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Casel Consultancy (SMC Limited). All Rights Reserved.</p>
+                <p>&copy; 2024 Casel Consultancy (SMC Limited). All Rights Reserved.</p>
+                <p class="mb-0">Registered Immigration Consultants | Uganda</p>
             </div>
         </div>
     </footer>
@@ -1518,9 +1618,10 @@ document.addEventListener('DOMContentLoaded', function() {
     <script>
         // Initialize AOS (Animate On Scroll)
         AOS.init({
-            duration: 1000,
+            duration: 800,
             once: true,
-            offset: 100
+            offset: 50,
+            delay: 100
         });
 
         // Loading screen
@@ -1528,47 +1629,125 @@ document.addEventListener('DOMContentLoaded', function() {
             const loader = document.getElementById('loader');
             setTimeout(() => {
                 loader.classList.add('hidden');
+                document.body.style.overflow = 'auto';
             }, 500);
         });
 
         // Navbar scroll effect
+        let lastScroll = 0;
+        const navbar = document.querySelector('.navbar');
+        
         window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
                 navbar.classList.add('scrolled');
+                
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    navbar.style.transform = 'translateY(0)';
+                }
             } else {
                 navbar.classList.remove('scrolled');
+                navbar.style.transform = 'translateY(0)';
             }
+            
+            lastScroll = currentScroll;
         });
 
-        // Form handling
+        // Mobile menu handling
         document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            
+            // Close mobile menu after clicking a link
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 992) {
+                        navbarCollapse.classList.remove('show');
+                        navbarToggler.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+            
+            // Handle mobile menu toggle
+            navbarToggler.addEventListener('click', function() {
+                if (window.innerWidth < 992) {
+                    const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+                    document.body.style.overflow = isExpanded ? 'auto' : 'hidden';
+                }
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navbar.contains(event.target);
+                if (!isClickInsideNav && window.innerWidth < 992) {
+                    navbarCollapse.classList.remove('show');
+                    navbarToggler.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Form handling
             const forms = document.querySelectorAll('form');
             
             forms.forEach(form => {
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    // Show success message
+                    // Get form data
+                    const formData = new FormData(this);
+                    const formValues = Object.fromEntries(formData);
+                    
+                    // Simulate form submission
                     showAlert('Thank you! Your message has been sent successfully. We will contact you within 24 hours.', 'success');
-                    form.reset();
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Track form submission (for analytics)
+                    console.log('Form submitted:', formValues);
                 });
             });
 
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    if (href === '#' || href === '#!') return;
+                    
                     e.preventDefault();
+                    const targetElement = document.querySelector(href);
                     
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
                     if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 80;
+                        
                         window.scrollTo({
-                            top: targetElement.offsetTop - 80,
+                            top: offsetTop,
                             behavior: 'smooth'
                         });
+                        
+                        // Update URL without page reload
+                        history.pushState(null, null, href);
+                    }
+                });
+            });
+            
+            // Phone number formatting for better mobile experience
+            const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+            phoneLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Track phone call clicks
+                    console.log('Phone number clicked:', this.href);
+                    
+                    // For iOS, ensure proper formatting
+                    if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+                        const phoneNumber = this.href.replace('tel:', '');
+                        window.location.href = 'tel:' + phoneNumber.replace(/\s/g, '');
                     }
                 });
             });
@@ -1576,18 +1755,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Show alert function
         function showAlert(message, type) {
+            // Remove existing alerts
+            const existingAlerts = document.querySelectorAll('.custom-alert');
+            existingAlerts.forEach(alert => alert.remove());
+            
             const alertDiv = document.createElement('div');
-            alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            alertDiv.className = `custom-alert alert alert-${type} alert-dismissible fade show`;
             alertDiv.style.cssText = `
+                position: fixed;
                 top: 20px;
                 right: 20px;
                 z-index: 9999;
-                min-width: 300px;
+                min-width: 280px;
+                max-width: 90%;
                 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                border-radius: 10px;
+                animation: slideIn 0.3s ease-out;
             `;
+            
             alertDiv.innerHTML = `
-                ${message}
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-check-circle-fill me-2 fs-4"></i>
+                    <div>${message}</div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             `;
             
             document.body.appendChild(alertDiv);
@@ -1598,12 +1789,31 @@ document.addEventListener('DOMContentLoaded', function() {
                     alertDiv.remove();
                 }
             }, 5000);
+            
+            // Add CSS for animation
+            if (!document.querySelector('#alert-animation')) {
+                const style = document.createElement('style');
+                style.id = 'alert-animation';
+                style.textContent = `
+                    @keyframes slideIn {
+                        from {
+                            transform: translateX(100%);
+                            opacity: 0;
+                        }
+                        to {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
         }
 
         // Counter animation for stats
         function animateCounter(element, target) {
             let current = 0;
-            const increment = target / 100;
+            const increment = target / 50;
             const timer = setInterval(() => {
                 current += increment;
                 if (current >= target) {
@@ -1612,7 +1822,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     element.textContent = Math.floor(current) + (element.textContent.includes('%') ? '%' : '+');
                 }
-            }, 20);
+            }, 30);
         }
 
         // Initialize counters when in view
@@ -1621,17 +1831,57 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (entry.isIntersecting) {
                     const stats = entry.target.querySelectorAll('.stat-number');
                     stats.forEach(stat => {
-                        const target = parseInt(stat.textContent);
-                        animateCounter(stat, target);
+                        const targetText = stat.textContent;
+                        const target = parseInt(targetText);
+                        if (!isNaN(target)) {
+                            stat.textContent = '0';
+                            setTimeout(() => animateCounter(stat, target), 300);
+                        }
                     });
+                    observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.3 });
 
         // Observe stats section
         const statsSection = document.querySelector('.stats-section');
         if (statsSection) {
             observer.observe(statsSection);
+        }
+
+        // Mobile detection and optimizations
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Apply mobile-specific optimizations
+        if (isMobileDevice()) {
+            document.body.classList.add('mobile-device');
+            
+            // Reduce animations on low-end devices
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                // Keep AOS animations but maybe reduce duration
+                AOS.init({
+                    duration: 600,
+                    once: true,
+                    offset: 50
+                });
+            }
+        }
+
+        // Touch device optimizations
+        if ('ontouchstart' in window || navigator.maxTouchPoints) {
+            // Add touch feedback to buttons
+            const touchElements = document.querySelectorAll('.btn, .nav-link, .social-link, .floating-button');
+            touchElements.forEach(el => {
+                el.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                
+                el.addEventListener('touchend', function() {
+                    this.style.transform = '';
+                });
+            });
         }
     </script>
 </body>
